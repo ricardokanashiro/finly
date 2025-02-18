@@ -1,0 +1,7 @@
+{
+  "name": "finly",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
