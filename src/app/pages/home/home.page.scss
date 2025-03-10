@@ -1,0 +1,44 @@
+@use "../../../scss/index.scss" as *;
+
+ion-content {
+
+  background-color: $veryLightGrayishBlue;
+  overflow-x: hidden;
+
+  .container {
+    height: 100dvh;
+    overflow-x: hidden;
+    padding: $padding-md;
+    overflow-y: auto;
+  }
+
+  header {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .profile-thumb {
+      background-color: $darkBlue;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+    }
+  }
+
+  .credit-cards-wrapper {
+
+    width: 100dvw;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    padding: 3rem 2rem 3rem 0;
+    margin-left: - $padding-md;
+
+    display: flex;
+  }
+}

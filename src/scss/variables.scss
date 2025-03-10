@@ -9,4 +9,10 @@ $yellow: #F6E767;
 $softGreen: #6ECABF;
 $softRed: #EE6F6B;
 $lightGray: #BBC3D1;
-$veryLightGrayishBlue: #F4F4F4;
+$veryLightGrayishBlue: #ebebeb;
+
+$padding-md: 2rem;
+
+.ion-color-red {
+  --ion-color-base: blue !important;
+}

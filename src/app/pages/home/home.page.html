@@ -1,8 +1,16 @@
 <ion-content [fullscreen]="true">
+  <div class="container">
 
-  <header>
-    <h1>Olá Ricardo</h1>
-    <ion-img class="profile-thumb"></ion-img>
-  </header>
+    <header>
+      <h1>Olá Ricardo!</h1>
+      <ion-img class="profile-thumb"></ion-img>
+    </header>
 
+    <div class="credit-cards-wrapper">
+      <app-credit-card type="total"></app-credit-card>
+      <app-credit-card type="entradas"></app-credit-card>
+      <app-credit-card type="saidas"></app-credit-card>
+    </div>
+
+  </div>
 </ion-content>

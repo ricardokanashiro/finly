@@ -1,0 +1,150 @@
+@use "../../../scss/index.scss" as *;
+
+.credit-card-wrapper {
+
+  display: flex;
+  align-items: stretch;
+  scroll-snap-align: start;
+
+  .ghost-spacing {
+    width: 2rem;
+  }
+}
+
+.credit-card {
+
+  background-color: $darkBlue;
+  width: 85dvw;
+  height: 17rem;
+  padding: 1.5rem 2.5rem;
+  border-radius: 1rem;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  header {
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    h3 {
+      color: white;
+      font-size: 2.7rem;
+      font-weight: bold;
+    }
+
+    h2 {
+      color: white;
+    }
+
+    ion-img.card-flag {
+      width: 3.5rem;
+      margin-top: 1rem;
+    }
+
+    .title-wrapper {
+
+      margin-top: 1rem;
+
+      h3 {
+        margin: 0;
+      }
+
+      h2 {
+        margin: 0 0 1.5rem 0;
+        font-size: 1.6rem;
+      }
+    }
+
+    .icon-wrapper {
+
+      background-color: $yellow;
+      padding: .7rem;
+      border-radius: 1rem;
+
+      ion-img {
+        width: 2.4rem;
+      }
+    }
+  }
+
+  .info-area {
+
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    ion-text {
+      color: white;
+      font-size: 1.2rem;
+    }
+  }
+
+  .elipse {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 16rem;
+  }
+}
+
+.card-entradas {
+
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  header {
+
+    .title-wrapper {
+
+      h3 {
+        color: $softGreen;
+      }
+
+      h2 {
+        color: $darkBlue;
+      }
+    }
+  }
+
+  .info-area {
+
+    ion-text {
+      color: $darkBlue;
+    }
+  }
+}
+
+.card-saidas {
+
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  header {
+
+
+    .title-wrapper {
+
+      h3 {
+        color: $softRed;
+      }
+
+      h2 {
+        color: $darkBlue;
+      }
+    }
+  }
+
+  .info-area {
+
+    ion-text {
+      color: $darkBlue;
+    }
+  }
+}
