@@ -3,13 +3,17 @@
 ion-content {
 
   background-color: $veryLightGrayishBlue;
-  overflow-x: hidden;
+  overflow: hidden;
+  height: 100dvh;
+  max-height: 100dvh;
 
   .container {
     height: 100dvh;
-    overflow-x: hidden;
+    max-height: 100dvh;
+    overflow: hidden;
     padding: $padding-md;
-    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
   }
 
   header {
@@ -34,11 +38,11 @@ ion-content {
   .credit-cards-wrapper {
 
     width: 100dvw;
-    overflow: auto;
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
     padding: 3rem 2rem 3rem 0;
     margin-left: - $padding-md;
-
+    
     display: flex;
   }
 }

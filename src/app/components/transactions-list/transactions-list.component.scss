@@ -1,0 +1,55 @@
+@use "../../../scss/index.scss" as *;
+
+:host {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+
+    button {
+
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        background-color: transparent;
+
+        ion-text {
+            color: $darkBlue;
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+
+        ion-img {
+            width: 1.8rem;
+        }
+    }
+}
+
+.list {
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 1.5rem;
+    overflow: auto;
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    .transaction-card-wrapper + .transaction-card-wrapper {
+        border-top: 1px solid $lightGray;
+    }
+}

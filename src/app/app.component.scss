@@ -1,0 +1,9 @@
+@use "../scss/index.scss" as *;
+
+ion-tab-bar {
+    background-color: $darkBlue;
+
+    ion-tab-button {
+        background-color: transparent;
+    }
+}
