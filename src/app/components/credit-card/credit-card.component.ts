@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, signal } from '@angular/core';
 
 import { formatCurrency } from '@angular/common';
 
@@ -10,11 +10,12 @@ import { formatCurrency } from '@angular/common';
 })
 export class CreditCardComponent  implements OnInit {
 
-  @Input() type = ''
+  @Input() type: string | undefined
+  @Input() value: number = 0
+  @Input() title: string | undefined
+  @Input() last_modify: Date | undefined
 
-  value = 420000
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {}
 
@@ -23,7 +24,7 @@ export class CreditCardComponent  implements OnInit {
       'credit-card card-entradas' : this.type === 'saidas' ? 'credit-card card-saidas' : 'credit-card'
   }
 
-  getFormattedValue() {
+  get formattedValue() {
     const prefix = this.type === 'entradas' ? '+' : this.type === 'saidas' ? '-' : ''
     return prefix + new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(this.value)
   }

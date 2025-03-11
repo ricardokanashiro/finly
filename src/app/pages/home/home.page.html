@@ -7,9 +7,18 @@
     </header>
 
     <div class="credit-cards-wrapper">
-      <app-credit-card type="total"></app-credit-card>
-      <app-credit-card type="entradas"></app-credit-card>
-      <app-credit-card type="saidas"></app-credit-card>
+
+      <app-credit-card 
+        *ngFor="let card of cardsList()" 
+        [type]="card.type" 
+        [value]="card.value" 
+        [title]="card.title" 
+        [last_modify]="card.last_modify">
+      </app-credit-card>
+
+      <!-- <app-credit-card type="total" [value]="420000"></app-credit-card>
+      <app-credit-card type="entradas" [value]="420000"></app-credit-card>
+      <app-credit-card type="saidas" [value]="420000"></app-credit-card> -->
     </div>
 
   </div>

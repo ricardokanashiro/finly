@@ -6,33 +6,23 @@
 
     <header>
 
+      <div class="title-wrapper">
+        <h2>{{ title }}</h2>
+        <h3>{{ formattedValue }}</h3>
+      </div>
+
       @if(type === 'total')
       {
-        <div class="title-wrapper">
-          <h2>Total</h2>
-          <h3>{{ getFormattedValue() }}</h3>
-        </div>
-
         <ion-img src="../../../assets/card-flag.svg" class="card-flag"></ion-img>
       }
       @else if(type === 'entradas')
       {
-        <div class="title-wrapper">
-          <h2>Entradas</h2>
-          <h3>{{ getFormattedValue() }}</h3>
-        </div>
-
         <div class="icon-wrapper">
           <ion-img src="../../../assets/income-icon.svg"></ion-img>
         </div>
       }
       @else if(type === 'saidas')
       {
-        <div class="title-wrapper">
-          <h2>Saídas</h2>
-          <h3>{{ getFormattedValue() }}</h3>
-        </div>
-
         <div class="icon-wrapper">
           <ion-img src="../../../assets/expenses-icon.svg"></ion-img>
         </div>
@@ -45,18 +35,17 @@
       @if(type === 'total')
       {
         <ion-text>SALDO ATUAL</ion-text>
-        <ion-text>Jan, 21</ion-text>
       }
       @else if(type === 'entradas')
       {
         <ion-text>ÚLTIMA EM</ion-text>
-        <ion-text>Jan, 21</ion-text>
       }
       @else if(type === 'saidas')
       {
         <ion-text>ÚLTIMA EM</ion-text>
-        <ion-text>Jan, 21</ion-text>
       }
+
+      <ion-text>{{ last_modify | date: 'MMM, dd yyyy' | titlecase }}</ion-text>
 
     </div>
 
